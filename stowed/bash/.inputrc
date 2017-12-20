@@ -1,0 +1,9 @@
+$include /etc/inputrc
+
+# auto-completion more like zsh
+set show-all-if-ambiguous on
+set completion-ignore-case on
+
+# treat hyphens as underscores when auto-completing
+set completion-map-case on
+set bell-style none

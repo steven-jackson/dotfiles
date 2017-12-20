@@ -1,0 +1,19 @@
+snippet html5
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>${1}</title>
+            <style>
+            </style>
+        </head>
+        <body>
+            ${0}
+            <script src="script.js"></script>
+        </body>
+    </html>
+
+snippet ahref
+options word
+    <a href="${1}">${2:TARGET}</a>{$3}

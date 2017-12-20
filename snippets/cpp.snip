@@ -1,0 +1,23 @@
+snippet crf
+        // Copyright 20${1:from} - `strftime("%Y")` Avecto Ltd. All rights reserved.
+
+        $0
+
+snippet cr
+        // Copyright `strftime("%Y")` Avecto Ltd. All rights reserved.
+
+        $0
+
+snippet guard
+options head
+        #ifndef ${1:#:SYMBOL}_H
+        #define $1_H
+
+        $0
+
+        #endif
+
+snippet log
+        emit Log(QString("${1:message}"), LogPriority::kLog${2:Debug});
+
+        $0

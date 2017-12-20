@@ -1,0 +1,11 @@
+*.log
+*.backup
+tags
+/stowed/vim/.vim/bundle
+
+/stowed/vscode/.config/Code/*
+!/stowed/vscode/.config/Code/User
+/stowed/vscode/.config/Code/User/globalStorage
+/stowed/vscode/.config/Code/User/workspaceStorage
+!/stowed/vscode/.config/Code/User/*.json
+!/stowed/vscode/.config/Code/User/snippets

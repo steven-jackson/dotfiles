@@ -1,0 +1,36 @@
+[user]
+	name = Steven Joruk
+	email = steven@joruk.com
+	signkey = 4A94786BFEF18B6C
+[color]
+    ui = true
+[core]
+    editor = nvim
+    pager = "less -x1,9"
+    trustctime = false
+[log]
+    date = short
+[credential]
+    helper = cache
+[push]
+    default = simple
+[alias]
+    lg = log -n 25 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    c = commit -s -S -v
+    first = rev-list --max-parents=0 HEAD
+
+[merge]
+    conflictstyle = diff3
+    tool = fugitive
+
+[mergetool "fugitive"]
+    cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\" -c \"call timer_start(50, { tid -> execute('wincmd l')})\"
+    prompt = false
+    keepBackup = false
+
+[diff]
+    tool = fugitive
+
+[difftool "fugitive"]
+    cmd = nvim -f -c \"Gdiff\" \"$MERGED\" -c \"call timer_start(50, { tid -> execute('wincmd l')})\"
+    prompt = false
